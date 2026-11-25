@@ -18,6 +18,7 @@
   .sub { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 0 28px; }
   .btn { display: inline-block; border: 0; border-radius: 12px; padding: 15px 24px; font: inherit; font-weight: 650; cursor: pointer; background: var(--c); color: #fff; }
   .btn.ghost { background: transparent; color: var(--c); border: 2px solid var(--c); }
+  .hero .row .btn { width: 100%; max-width: 420px; text-align: center; }
   .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
   .small { font-size: 14px; color: var(--muted); }
   section { padding: 44px 0; }
@@ -62,36 +63,36 @@ fbq('init',"2270390643509413");fbq('track','PageView');
 </script>
 </head>
 <body>
-<header><div class="wrap">Mileora</div></header>
+<header><div class="wrap">Mileora <span class="small" style="font-weight:500">by Applia</span></div></header>
 
 <div class="hero"><div class="wrap">
   <p class="audience">For rideshare and delivery drivers, contractors and the self-employed</p>
   <h1>Stop losing mileage deductions to a tracker that quietly stopped logging.</h1>
   <p class="sub">Automatic trip tracking, logs with the date, miles and purpose of every business drive, and your history tied to your account, not your phone.</p>
   <div class="row">
-    <button class="btn" data-intent="price" data-plan="yearly" data-pos="hero">Reserve founding price · $39/year</button>
-    <button class="btn ghost" data-intent="waitlist" data-pos="hero">Just notify me at launch</button>
+    <button class="btn" data-intent="price" data-plan="yearly" data-pos="hero">Reserve founding price · $59.99/year</button>
+    <button class="btn ghost" data-intent="waitlist" data-pos="hero">Just email me at launch</button>
   </div>
-  <p class="note">Not live yet. Nothing is charged today. Launching on iPhone and Android.</p>
+  <p class="note">Not live yet. Nothing is charged today. Planned for iPhone and Android.</p>
   <div class="phone" aria-label="App preview"><p class="t">This week · 214 mi</p><div class="r"><b>Mon 8:02 AM</b><span class="v">18.4 mi</span><span>Home → Client site</span><span class="v">Business</span></div><div class="r"><b>Mon 5:40 PM</b><span class="v">18.9 mi</span><span>Client site → Home</span><span class="v">Business</span></div><div class="r"><b>Tue 11:15 AM</b><span class="v">62.0 mi</span><span>Delivery route</span><span class="v">Business</span></div><div class="r"><b>Wed 7:30 PM</b><span class="v">4.2 mi</span><span>Grocery store</span><span class="v">Personal</span></div><p class="f">✓ Logging active · checked today</p></div><p class="small" style="text-align:center;margin-top:10px">Concept preview with sample data. App in development.</p>
 </div></div>
 
 <section class="soft"><div class="wrap">
   <h2>Tired of this?</h2>
-  <ul class="pains"><li>Your tracker silently stops logging for weeks and you only notice at tax time.</li><li>Your yearly plan more than doubled without new features.</li><li>You switched phones and lost your whole drive history.</li><li>Short business trips go missing and you have to add them by hand.</li></ul>
+  <ul class="pains"><li>Your tracker silently stops logging for weeks and you only notice at tax time.</li><li>Your yearly plan jumped in price without new features.</li><li>You switched phones and lost your whole drive history.</li><li>Short business trips go missing and you have to add them by hand.</li></ul>
 </div></section>
 
 <section><div class="wrap">
-  <h2>What Mileora does differently</h2>
+  <h2>What Mileora will do differently</h2>
   <div class="grid"><div class="card"><h3>Know the same day if logging stops</h3><p>Automatic trip detection plus a daily check: if logging stops, you find out that day, not in April.</p></div><div class="card"><h3>Your data follows you</h3><p>Trips sync to your account and move with you to a new phone. Export to CSV or PDF anytime.</p></div><div class="card"><h3>Founding price, locked</h3><p>Founding members keep their price for as long as they stay subscribed. Unlimited drives and reports.</p></div></div>
 </div></section>
 
 <section class="soft price"><div class="wrap">
   <h2>Simple pricing</h2>
   <div class="grid">
-    <div class="card"><span class="badge">Monthly</span><div class="amount">$4.99</div><div class="small">per month</div>
+    <div class="card"><span class="badge">Monthly</span><div class="amount">$6.99</div><div class="small">per month</div>
       <button class="btn ghost" data-intent="price" data-plan="monthly" data-pos="pricing">Reserve monthly</button></div>
-    <div class="card"><span class="badge">Best value</span><div class="amount">$39</div><div class="small">per year, unlimited drives and reports</div>
+    <div class="card"><span class="badge">Best value</span><div class="amount">$59.99</div><div class="small">per year (save 28%), unlimited drives and reports</div>
       <button class="btn" data-intent="price" data-plan="yearly" data-pos="pricing">Reserve yearly</button></div>
   </div>
   <p class="note">Founding price, locked as long as you stay subscribed. No payment today.</p>
@@ -109,7 +110,7 @@ fbq('init',"2270390643509413");fbq('track','PageView');
     <p id="dlg-text"></p>
     <form id="form">
       <input type="email" name="email" required placeholder="you@email.com" autocomplete="email">
-      <label class="consent"><input type="checkbox" name="consent" required> Email me when Mileora launches. We only use your email to tell you when Mileora launches. Unsubscribe anytime.</label>
+      <label class="consent"><input type="checkbox" name="consent" required> Email me when Mileora launches. We only use your email to tell you when Mileora launches. Unsubscribe anytime. <a href="../privacy.html" target="_blank">Privacy policy</a></label>
       <button class="btn" type="submit" style="width:100%">Reserve my spot</button>
       <p class="small hidden" id="err" style="color:#dc2626;margin-top:10px">Something went wrong, please try again.</p>
     </form>
@@ -123,7 +124,7 @@ fbq('init',"2270390643509413");fbq('track','PageView');
 <script>
 (function () {
   var SLUG = "mileage", BRAND = "Mileora", FORM = "xjywlyao";
-  var PRICES = { monthly: "$4.99", yearly: "$39" };
+  var PRICES = { monthly: "$6.99", yearly: "$59.99" };
   var qs = new URLSearchParams(location.search), utm = {};
   ["utm_source", "utm_medium", "utm_campaign", "utm_content", "fbclid"].forEach(function (k) { if (qs.get(k)) utm[k] = qs.get(k); });
   var ctx = { intent: "waitlist", plan: "" };
