@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mileora — automatic mileage log that never misses a drive</title>
-<meta name="description" content="Automatic trip detection, IRS-ready reports and your history safely tied to your account, not your phone. No surprise price hikes.">
+<meta name="description" content="Automatic trip tracking, logs with the date, miles and purpose of every business drive, and your history tied to your account, not your phone.">
 <meta property="og:title" content="Mileora — automatic mileage log that never misses a drive">
-<meta property="og:description" content="Automatic trip detection, IRS-ready reports and your history safely tied to your account, not your phone. No surprise price hikes.">
+<meta property="og:description" content="Automatic trip tracking, logs with the date, miles and purpose of every business drive, and your history tied to your account, not your phone.">
 <style>
   :root { --c: #0f766e; --ink: #111827; --muted: #4b5563; --bg: #ffffff; --soft: #f3f4f6; }
   * { box-sizing: border-box; }
@@ -44,6 +44,15 @@
   label.consent { display: flex; gap: 8px; font-size: 14px; color: var(--muted); margin-bottom: 14px; align-items: flex-start; }
   .close { position: absolute; top: 10px; right: 14px; background: none; border: 0; font-size: 24px; cursor: pointer; color: var(--muted); }
   .hidden { display: none; }
+  .audience { font-size: 15px; font-weight: 600; color: var(--c); margin: 0 0 10px; }
+  .note { font-size: 15px; font-weight: 600; color: var(--ink); margin: 14px 0 0; }
+  .phone { margin: 34px auto 0; max-width: 300px; border: 10px solid #111827; border-radius: 34px; padding: 18px 14px 16px; background: #fff; box-shadow: 0 18px 40px rgba(0,0,0,.18); }
+  .phone .t { font-weight: 700; font-size: 15px; margin: 0 0 10px; color: var(--c); }
+  .phone .r { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 9px 0; border-top: 1px solid #e5e7eb; font-size: 13px; }
+  .phone .r b { font-weight: 650; }
+  .phone .r span { color: var(--muted); }
+  .phone .r .v { text-align: right; font-weight: 650; color: var(--ink); }
+  .phone .f { margin-top: 10px; font-size: 12px; font-weight: 600; color: var(--c); }
 </style>
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -56,38 +65,41 @@ fbq('init',"2270390643509413");fbq('track','PageView');
 <header><div class="wrap">Mileora</div></header>
 
 <div class="hero"><div class="wrap">
-  <h1>The mileage tracker that logs every drive. For a fair price.</h1>
-  <p class="sub">Automatic trip detection, IRS-ready reports and your history safely tied to your account, not your phone. No surprise price hikes.</p>
+  <p class="audience">For rideshare and delivery drivers, contractors and the self-employed</p>
+  <h1>Stop losing mileage deductions to a tracker that quietly stopped logging.</h1>
+  <p class="sub">Automatic trip tracking, logs with the date, miles and purpose of every business drive, and your history tied to your account, not your phone.</p>
   <div class="row">
-    <button class="btn" data-intent="price" data-plan="yearly">Get Mileora — $39/year</button>
-    <button class="btn ghost" data-intent="waitlist">Join the early access list</button>
+    <button class="btn" data-intent="price" data-plan="yearly" data-pos="hero">Reserve founding price · $39/year</button>
+    <button class="btn ghost" data-intent="waitlist" data-pos="hero">Just notify me at launch</button>
   </div>
-  <p class="small">Launching soon on iPhone and Android.</p>
+  <p class="note">Not live yet. Nothing is charged today. Launching on iPhone and Android.</p>
+  <div class="phone" aria-label="App preview"><p class="t">This week · 214 mi</p><div class="r"><b>Mon 8:02 AM</b><span class="v">18.4 mi</span><span>Home → Client site</span><span class="v">Business</span></div><div class="r"><b>Mon 5:40 PM</b><span class="v">18.9 mi</span><span>Client site → Home</span><span class="v">Business</span></div><div class="r"><b>Tue 11:15 AM</b><span class="v">62.0 mi</span><span>Delivery route</span><span class="v">Business</span></div><div class="r"><b>Wed 7:30 PM</b><span class="v">4.2 mi</span><span>Grocery store</span><span class="v">Personal</span></div><p class="f">✓ Logging active · checked today</p></div><p class="small" style="text-align:center;margin-top:10px">Concept preview with sample data. App in development.</p>
 </div></div>
 
 <section class="soft"><div class="wrap">
   <h2>Tired of this?</h2>
-  <ul class="pains"><li>Your tracker silently stops logging for weeks and you only notice at tax time.</li><li>Your yearly plan jumped from $60 to $140 with nothing new in return.</li><li>You switched phones and lost your whole drive history.</li><li>Short business trips go missing and you have to add them by hand.</li></ul>
+  <ul class="pains"><li>Your tracker silently stops logging for weeks and you only notice at tax time.</li><li>Your yearly plan more than doubled without new features.</li><li>You switched phones and lost your whole drive history.</li><li>Short business trips go missing and you have to add them by hand.</li></ul>
 </div></section>
 
 <section><div class="wrap">
   <h2>What Mileora does differently</h2>
-  <div class="grid"><div class="card"><h3>Never miss a drive</h3><p>Background detection with a daily check-in: if logging stops, you know the same day, not in April.</p></div><div class="card"><h3>Your data follows you</h3><p>Trips sync to your account and move with you to a new phone. Export to CSV or PDF anytime.</p></div><div class="card"><h3>Price locked for life</h3><p>Founding members keep their price forever. No yearly hikes, unlimited reports included.</p></div></div>
+  <div class="grid"><div class="card"><h3>Never miss a drive</h3><p>Background detection with a daily check: if logging stops, you know the same day, not in April.</p></div><div class="card"><h3>Your data follows you</h3><p>Trips sync to your account and move with you to a new phone. Export to CSV or PDF anytime.</p></div><div class="card"><h3>Founding price, locked</h3><p>Founding members keep their price for as long as they stay subscribed. Unlimited drives and reports.</p></div></div>
 </div></section>
 
 <section class="soft price"><div class="wrap">
   <h2>Simple pricing</h2>
   <div class="grid">
     <div class="card"><span class="badge">Monthly</span><div class="amount">$4.99</div><div class="small">per month</div>
-      <button class="btn ghost" data-intent="price" data-plan="monthly">Choose monthly</button></div>
+      <button class="btn ghost" data-intent="price" data-plan="monthly" data-pos="pricing">Reserve monthly</button></div>
     <div class="card"><span class="badge">Best value</span><div class="amount">$39</div><div class="small">per year, unlimited drives and reports</div>
-      <button class="btn" data-intent="price" data-plan="yearly">Choose yearly</button></div>
+      <button class="btn" data-intent="price" data-plan="yearly" data-pos="pricing">Reserve yearly</button></div>
   </div>
+  <p class="note">Founding price, locked as long as you stay subscribed. No payment today.</p>
 </div></section>
 
 <footer><div class="wrap">
   <p><strong>Mileora is in development.</strong> Nothing is charged on this page: choosing a plan only reserves early access and founding-member pricing.</p>
-  <p id="privacy">Privacy: we store your email only to tell you when Mileora launches, and you can unsubscribe at any time. This page uses the Meta pixel to measure ad performance.</p>
+  <p id="privacy">Privacy: We only use your email to tell you when Mileora launches. You can unsubscribe at any time. This page uses the Meta pixel to measure ad performance.</p>
 </div></footer>
 
 <dialog id="dlg">
@@ -97,7 +109,7 @@ fbq('init',"2270390643509413");fbq('track','PageView');
     <p id="dlg-text"></p>
     <form id="form">
       <input type="email" name="email" required placeholder="you@email.com" autocomplete="email">
-      <label class="consent"><input type="checkbox" name="consent" required> Email me when Mileora launches. No spam, unsubscribe anytime.</label>
+      <label class="consent"><input type="checkbox" name="consent" required> Email me when Mileora launches. We only use your email to tell you when Mileora launches. Unsubscribe anytime.</label>
       <button class="btn" type="submit" style="width:100%">Reserve my spot</button>
       <p class="small hidden" id="err" style="color:#dc2626;margin-top:10px">Something went wrong, please try again.</p>
     </form>
@@ -119,11 +131,11 @@ fbq('init',"2270390643509413");fbq('track','PageView');
   var dlg = document.getElementById("dlg");
   document.querySelectorAll("[data-intent]").forEach(function (b) {
     b.addEventListener("click", function () {
-      ctx.intent = b.dataset.intent; ctx.plan = b.dataset.plan || "";
+      ctx.intent = b.dataset.intent; ctx.plan = b.dataset.plan || ""; ctx.pos = b.dataset.pos || "";
       if (ctx.intent === "price") {
-        track("InitiateCheckout", { content_name: SLUG, content_category: ctx.plan, currency: "USD", value: parseFloat(PRICES[ctx.plan].replace(/[^0-9.]/g, "")) });
-        document.getElementById("dlg-title").textContent = BRAND + " isn't live yet. You're early!";
-        document.getElementById("dlg-text").textContent = "Nothing is charged today. Leave your email and we'll send you the founding-member price (" + PRICES[ctx.plan] + (ctx.plan === "yearly" ? "/year" : "/month") + ", locked for life) on launch day.";
+        track("InitiateCheckout", { content_name: SLUG, content_category: ctx.plan + "_" + ctx.pos, currency: "USD", value: parseFloat(PRICES[ctx.plan].replace(/[^0-9.]/g, "")) });
+        document.getElementById("dlg-title").textContent = "Reserve your founding price";
+        document.getElementById("dlg-text").textContent = BRAND + " isn't live yet and nothing is charged today. Leave your email: on launch day you'll get " + PRICES[ctx.plan] + (ctx.plan === "yearly" ? "/year" : "/month") + ", locked as long as you stay subscribed.";
       } else {
         track("ViewContent", { content_name: SLUG });
         document.getElementById("dlg-title").textContent = "Get early access to " + BRAND;
@@ -138,7 +150,7 @@ fbq('init',"2270390643509413");fbq('track','PageView');
     e.preventDefault();
     var f = e.target, err = document.getElementById("err");
     err.classList.add("hidden");
-    var payload = Object.assign({ email: f.email.value, niche: SLUG, intent: ctx.intent, plan: ctx.plan, consent: "yes", page: location.pathname }, utm);
+    var payload = Object.assign({ email: f.email.value, niche: SLUG, intent: ctx.intent, plan: ctx.plan, position: ctx.pos, consent: "yes", page: location.pathname }, utm);
     function done() {
       track("Lead", { content_name: SLUG, content_category: ctx.intent });
       document.getElementById("step-form").classList.add("hidden");
